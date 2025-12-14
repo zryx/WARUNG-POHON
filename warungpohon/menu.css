@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #222;
+    line-height: 1.5;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-image: url(gambar/background3.jpg);       /* jadi putih, bukan transparan */
+    z-index: 10;
+    transition: background 0.5s ease, backdrop-filter 0.5s ease, padding 0.4s ease;
+}
+
+.btn-notifikasi 
+{
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    transition: transform 0.3s ease;
+}
+
+.btn-notifikasi:hover
+{
+    transform: scale(1.3);
+}
+
+.navbar.scrolled {
+    background: transparent;
+    background: rgba(255, 255, 255, 0.1); /* transparan */
+    backdrop-filter: blur(5px); /* efek kaca */
+    border-bottom: none;
+    backdrop-filter: blur(8px);
+    padding: 5px 0;
+}
+
+.logo img {
+    width: 90px;           /* harus sama dengan height */
+    height: 90px;
+    border-radius: 50%;    /* membuat lingkaran sempurna */
+    object-fit: cover;
+}
+
+/* LOGO MEMBESAR */
+.navbar .logo img {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.2);
+}
+
+/* ICON 🛎️ MEMBESAR */
+.right-side .btn-notifikasi {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.right-side .btn-notifikasi:hover {
+    transform: scale(1.3);
+}
+
+
+.menu {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 26px;
+    font-family: Georgia;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+/* BOOK BUTTON + MENU ICON */
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-notifikasi {
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 110px 100px;
+    background-image: url(gambar/background.jpg);
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-text h1 span {
+    color: #e63946;
+}
+
+.hero-text p {
+    margin-top: 100px;
+    width: 400px;
+    color: white;
+}
+
+.hero-buttons {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.btn-red {
+    background: #e63946;
+    padding: 10px 20px;
+    color: white;
+    border: 2px solid #444;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.hero-buttons .btn-red:hover
+{
+    background: rgba(0, 0, 0, 0.0) ;
+    color: #e63946;
+}
+
+.btn-outline {
+    border: 2px solid #444;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #e63946;
+    cursor: pointer;
+}
+
+.hero-buttons .btn-outline:hover
+{
+    background:#e63946 ;
+    color: white;
+}
+
+.floating-tag {
+    margin-top: 20px;
+    background: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #222;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.hero-img img {
+    width: 500px;
+}
+
+/* FEATURES SECTION */
+.features {
+    background-image: url(gambar/background3.jpg); ;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.feature-box {
+    text-align: center;
+    color: white;
+}
+
+.feature-box img {
+    width: 145px;
+    margin-bottom: 10px;
+}
+
+/* MENU LIST SECTION */
+.menu-list {
+    padding: 80px 100px;
+    background: #f7f0ea;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    background-image: url(gambar/background3.jpg); ;
+    padding: 60px 100px;
+    color: #f7f0ea;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.gallery-title button
+{
+    margin: 12px;
+    padding: 10px 50px;
+    background: #010000;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+    border: none;
+    color: white;
+    border-radius: 25px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.gallery-card {
+    width: 30%;
+    background: #f7f0ea;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gallery-card img {
+    margin-top: 20px;
+    border-radius: 25px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-card button {
+    margin: 12px;
+    padding: 10px 20px;
+    background: #e63946;
+    border: none;
+    color: white;
+    border-radius: 25px;
+}
+
+
+/* FOOTER MAIN */
+.footer {
+    background: #f7f0ea; /* hijau muda seperti di gambar */
+    padding: 50px 20px;
+    margin-top: 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Kolom kiri - Info restoran */
+.footer .info h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Jadwal */
+.footer .schedule h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Sosial media */
+.social img {
+    height: 185px;
+    margin-right: 15px;
+}
+
+
+
+/* COPYRIGHT */
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.icon {
+    margin-right: 5px;
+}

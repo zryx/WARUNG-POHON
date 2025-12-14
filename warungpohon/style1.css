@@ -1,0 +1,88 @@
+/* style.css - sederhana, ubah sesuai kebutuhan */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f3dfe0;
+  margin:0;
+  padding:20px;
+  color:#222;
+}
+.container{
+  display:flex;
+  gap:20px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.left, .right{
+  background:#fff0f1;
+  padding:18px;
+  border-radius:8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.left{ flex: 2; }
+.right{ flex: 1; min-width:320px; }
+
+.kategori-box{
+  margin-bottom:20px;
+  border: 3px solid #c39;
+  padding:10px;
+  border-radius:6px;
+  background:#efe1e2;
+}
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:6px;
+  border-bottom:1px dashed rgba(0,0,0,0.06);
+}
+.menu-item span{ flex:1; }
+.menu-item .controls{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.menu-item button{
+  padding:6px 10px;
+  border-radius:6px;
+  border:none;
+  background:#b22222;
+  color:#fff;
+  cursor:pointer;
+}
+.menu-item input.qty {
+  width:48px;
+  text-align:center;
+  padding:6px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  background:#fff;
+}
+
+.total-bar{
+  margin-top:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.btn-primary{
+  padding:10px 16px;
+  background:#222;
+  color:#fff;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+}
+.note{
+  font-size:14px;
+  color:#333;
+  margin-top:8px;
+}
+
+/* form */
+.input-group{ margin-bottom:10px; }
+.input-group label{ display:block; font-size:13px; margin-bottom:4px; }
+.input-group input{ width:100%; padding:8px; border-radius:6px; border:1px solid #ccc; }
+.disabled{
+  opacity:0.6;
+  pointer-events:none;
+}

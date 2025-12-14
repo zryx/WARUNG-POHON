@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+        }
+        .box {
+            margin-top: 25px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .method {
+            margin-top: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        .method:hover {
+            background: #e8e8e8;
+        }
+        .qris-box, .va-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            display: none;
+            border: 1px solid #ccc;
+        }
+        .pay-finish {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            border: none;
+            background: #28a745;
+            color: white;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .pay-finish:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Pembayaran Pesanan</h2>
+
+    <div class="box">
+        <strong>Total yang harus dibayar:</strong>
+        <h3 id="totalBayar">Rp 0</h3>
+    </div>
+
+    <div class="box">
+        <strong>Pilih Metode Pembayaran</strong>
+
+        <div class="method" onclick="showQris()">
+            <span>QRIS</span>
+            <span>➜</span>
+        </div>
+        <div class="method" onclick="showVA()">
+            <span>Virtual Account</span>
+            <span>➜</span>
+        </div>
+    </div>
+
+    <!-- QRIS -->
+    <div class="qris-box" id="qrisBox">
+        <h3>Scan QRIS</h3>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=WarungPohonPembayaran" width="200" height="200">
+        <p>Scan menggunakan aplikasi e-wallet Anda.</p>
+    </div>
+
+    <!-- VA -->
+    <div class="va-box" id="vaBox">
+        <h3>Virtual Account</h3>
+        <p>Nomor VA:</p>
+        <h2>12888 55667 3344</h2>
+        <p>Bayar melalui ATM / m-banking Anda.</p>
+    </div>
+
+    <button class="pay-finish" onclick="selesai()">Saya Sudah Bayar</button>
+</div>
+
+<script>
+    // Set total dari halaman sebelumnya via URL
+    const params = new URLSearchParams(window.location.search);
+    const total = params.get("total") || 0;
+    document.getElementById("totalBayar").innerText = "Rp " + Number(total).toLocaleString();
+
+    function showQris() {
+        document.getElementById('qrisBox').style.display = 'block';
+        document.getElementById('vaBox').style.display = 'none';
+    }
+
+    function showVA() {
+        document.getElementById('vaBox').style.display = 'block';
+        document.getElementById('qrisBox').style.display = 'none';
+    }
+
+    function selesai() {
+        alert("Pembayaran berhasil! Pesanan Anda sedang diproses.");
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>

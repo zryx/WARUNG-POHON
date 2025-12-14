@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ececec;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+/* FORM USER */
+.user-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.input-box {
+    padding: 14px;
+    flex: 1;
+    border-radius: 6px;
+    border: 2px solid #333;
+}
+
+.btn-reservasi {
+    background: black;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* TITLE */
+.title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ROW (2 KOLOM) */
+.row {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* MENU ITEM CARD */
+.menu-item {
+    background: white;
+    padding: 15px 18px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu-price {
+    font-size: 14px;
+    color: #444;
+    margin-top: 3px;
+}
+
+/* COUNTER */
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter button {
+    padding: 5px 12px;
+    font-size: 20px;
+    background: #dedede;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.counter .count {
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+}
+
+/* SNACK */
+.snack-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.snack-section {
+    margin-bottom: 50px;
+}

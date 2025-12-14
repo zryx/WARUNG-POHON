@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset dasar agar tampilan rapi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Container Utama */
+.hero-section {
+    /* --- PENTING: PENGATURAN BACKGROUND --- */
+    
+    /* Ganti 'nama-file-gambar-kamu.jpg' dengan nama file gambarmu */
+    background-image: url('gambar/backkground2.jpg'); 
+    
+    /* Jika gambar belum ada, warna ini akan muncul agar teks terbaca */
+    background-color: #0e659e; 
+    
+    background-size: cover;       /* Agar gambar memenuhi layar */
+    background-position: center;  /* Agar gambar di tengah */
+    background-repeat: no-repeat;
+    
+    height: 100vh; /* Tinggi memenuhi layar penuh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 20px;
+}
+
+/* Styling Judul WELCOME */
+.title {
+    font-size: 3rem; /* Ukuran besar */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Styling Lorem ipsum */
+.subtitle {
+    font-size: 70px;
+    font-weight: 300;
+    margin-bottom: 80px; /* Jarak jauh ke tombol seperti di gambar */
+    opacity: 0.8;
+}
+
+/* Styling Do You Wanna Join Us? */
+.cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Styling Group Tombol */
+.button-group {
+    display: flex;
+    gap: 20px; /* Jarak antar tombol */
+    justify-content: center;
+}
+
+/* Styling Umum Tombol */
+.btn {
+    padding: 12px 30px;
+    border-radius: 50px; /* Membuat tombol bulat (pill shape) */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+/* Tombol Kiri (Putih) */
+.btn-white {
+    background-color: rgba(0, 0, 0, 0.613);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0a9;
+    color: black;
+}
+
+/* Tombol Kanan (Transparan dengan garis) */
+.btn-transparent {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.483);
+}
+
+/* Footer Credit di bawah */
+.footer-credit {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Responsive untuk HP (Layar kecil) */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .button-group {
+        flex-direction: column; /* Tombol jadi atas bawah di HP */
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        display: block;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="content-wrapper">
+            <h2 class="title">SELAMAT DATANG DI</h2>
+            
+            <p class="subtitle">Website Warung Pohon</p>
+
+            <p class="cta-text">Apakah Anda <strong>Sedang Lapar?</strong></p>
+
+            <div class="button-group">
+                <a href="first.html" class="btn btn-white">Masuk Sebagai Tamu</a>
+                <a href="file php/login.php" class="btn btn-transparent">Login</a>
+            </div>
+        </div>
+
+        <div class="footer-credit">
+            dibuat oleh ©2025 GENGS of WARUNG POHON
+        </div>
+    </div>
+
+</body>
+</html>

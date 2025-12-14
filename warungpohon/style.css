@@ -1,0 +1,207 @@
+/* ---------------------------
+   GLOBAL STYLES
+---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(gambar/background.jpg);
+    padding: 40px 0;
+}
+
+.menu-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+}
+
+/* ---------------------------
+   HEADER
+---------------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 100px;
+    font-weight: 700;
+    margin-right: 250px;
+}
+
+.header a
+{
+    text-decoration: none;
+    color:rgb(255, 255, 255) ;
+}
+
+
+.header button
+{
+    background-color: rgb(43, 39, 39);
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 120px;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+}
+
+.header button:hover
+{
+    background-color: #e63946;
+}
+
+.logo {
+    font-size: 0px;
+    opacity: 0.8;
+}
+
+.logo img
+{
+    width: 200px;
+    height: 200px;
+}
+
+/* ---------------------------
+RAMEN GRID
+---------------------------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: rgb(191, 184, 184);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.menu-card img {
+    width: 180px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.menu-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu-card p {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.7;
+    height: 40px;
+}
+
+.price {
+    margin-top: 15px;
+    background: #b57b4d;
+    color: white;
+    padding: 8px 0;
+    width: 120px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------
+   BEVERAGE SECTION
+---------------------------- */
+.bev-title {
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.beverage-box {
+    background: rgb(191, 184, 184);
+    margin-top: 25px;
+    padding: 25px 20px;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: black;
+}
+
+.drink-item {
+    text-align: center;
+    width: 23%;
+}
+
+.drink-item img {
+    width: 180px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.drink-item h4 {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.drink-item p {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.drink-item span {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+
+    background: #b57b4d;
+    color: white;
+
+    border-radius: 20px;
+}
+
+
+.nav-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+    padding: 20px 60px;
+    background: white;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.nav-buttons a:hover {
+    background: #e63946;
+    color: rgb(0, 0, 0);
+}
+
+/* Jika ingin ukuran lebih besar */
+.back-btn, .order-btn {
+    display: inline-block;
+}

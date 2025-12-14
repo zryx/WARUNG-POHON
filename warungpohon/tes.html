@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pemesanan Warung Pohon</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #e0e0e0;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 450px;
+        margin: auto;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border: 1px solid #aaa;
+        font-size: 15px;
+    }
+
+    .section-title {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #444;
+        padding-left: 3px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f4f4f4;
+        padding: 15px;
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+
+    .item-name {
+        font-weight: bold;
+    }
+
+    .counter {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .counter button {
+        width: 32px;
+        height: 32px;
+        border-radius: 7px;
+        border: none;
+        background: #ddd;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .counter button:hover {
+        background: #ccc;
+    }
+
+    .footer-box {
+        margin-top: 35px;
+        padding: 18px;
+        background: #222;
+        color: white;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 17px;
+    }
+
+    .pay-btn {
+        margin-top: 15px;
+        width: 100%;
+        background: #28a745;
+        color: white;
+        padding: 14px;
+        border-radius: 10px;
+        border: none;
+        font-size: 17px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .pay-btn:hover {
+        background: #218838;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Form Pemesanan</h2>
+
+    <input type="text" id="nama" placeholder="Nama anda...">
+    <input type="text" id="telp" placeholder="No Telepon...">
+
+    <!-- Makanan -->
+    <div class="section-title">Makanan</div>
+    <div class="item">
+        <div>
+            <div class="item-name">Nasi Ayam Penyet</div>
+            <div>Rp15.000</div>
+        </div>
+        <div class="counter">
+            <button onclick="updateQty('m1', -1)">-</button>
+            <span id="m1">0</span>
+            <button onclick="updateQty('m1', 1)">+</button>
+        </div>
+    </div>
+
+    <!-- Minuman -->
+    <div class="section-title">Minuman</div>
+    <div class="item">
+        <div>
+            <div class="item-name">Es Teh</div>
+            <div>Rp5.000</div>
+        </div>
+        <div class="counter">
+            <button onclick="updateQty('mn1', -1)">-</button>
+            <span id="mn1">0</span>
+            <button onclick="updateQty('mn1', 1)">+</button>
+        </div>
+    </div>
+
+    <!-- Snack -->
+    <div class="section-title">Snack</div>
+    <div class="item">
+        <div>
+            <div class="item-name">Kentang Goreng</div>
+            <div>Rp10.000</div>
+        </div>
+        <div class="counter">
+            <button onclick="updateQty('sn1', -1)">-</button>
+            <span id="sn1">0</span>
+            <button onclick="updateQty('sn1', 1)">+</button>
+        </div>
+    </div>
+
+    <!-- Total -->
+    <div class="footer-box">
+        <span>Total Pesanan:</span>
+        <strong id="totalHarga">Rp 0</strong>
+    </div>
+
+    <button class="pay-btn"><a href="tes2.html">Bayar Sekarang </a> </button>
+
+</div>
+
+
+<script>
+    const harga = {
+        m1: 15000,
+        mn1: 5000,
+        sn1: 10000
+    };
+
+    function updateQty(id, val) {
+        let elem = document.getElementById(id);
+        let jumlah = parseInt(elem.innerText);
+
+        jumlah += val;
+        if (jumlah < 0) jumlah = 0;
+
+        elem.innerText = jumlah;
+        hitungTotal();
+    }
+
+    function hitungTotal() {
+        let total = 
+            document.getElementById("m1").innerText * harga.m1 +
+            document.getElementById("mn1").innerText * harga.mn1 +
+            document.getElementById("sn1").innerText * harga.sn1;
+
+        document.getElementById("totalHarga").innerText = "Rp " + total.toLocaleString();
+    }
+</script>
+
+</body>
+</html>
